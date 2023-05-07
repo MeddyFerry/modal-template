@@ -18,9 +18,13 @@
 .logo {
   height: 5rem;
   width: 7rem;
-  margin-right: 46vw;
+  margin-right: 44vw;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: fixed;
+}
 
-  position: absolute;
+.logo:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
 }
