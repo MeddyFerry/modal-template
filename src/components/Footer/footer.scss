@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 6vh;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  text-align: center;
+
+  background-image: linear-gradient(to bottom, #e7c6ff, #ffb3c6);
+  box-shadow: 0px 1px 4px 1px #adb5bd;
+}
+
+.footer-links {
+  padding-top: 1rem;
+  display: inline-block;
+  margin: 0 1rem;
+  color: #343a40;
+}

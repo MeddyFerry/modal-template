@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  background-image: linear-gradient(to bottom, #e7c6ff, #ffb3c6);
+  box-shadow: 0px 1px 4px 1px #adb5bd;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.logo {
+  height: 5rem;
+  width: 7rem;
+  margin-right: 46vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  position: absolute;
+}

@@ -1,0 +1,88 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin form-input-style {
+  background-color: #f9f7f3;
+  border: 1px solid #f9f7f3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 12px;
+  width: 70%;
+}
+
+.form * {
+  color: #343a40;
+}
+
+.open-modal-btn {
+  @include flex-center;
+  box-shadow: 1px 2px 3px 0px #343a40;
+  margin-right: 2rem;
+}
+
+.modal-container {
+  @include flex-center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 28rem;
+  height: 80%;
+  max-height: 28rem;
+  z-index: 1000;
+  background-image: linear-gradient(to bottom, #eee4e1, #ffd6ff);
+  border-radius: 1rem;
+  color: #343a40;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 3px 0px #343a40;
+}
+
+.modal-actions {
+  @include flex-center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+}
+
+.form-input {
+  @include form-input-style;
+  box-shadow: 1px 2px 3px 0px #343a40;
+  margin: 1rem;
+  width: max-content;
+}
+
+.form-input:hover {
+  border-color: #c77dff;
+}
+
+.form-input:focus {
+  border-color: #c77dff;
+  outline: none;
+}
+
+.modal-header {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.modal-img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.modal-title {
+  @include flex-center;
+  flex-direction: row-reverse;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
