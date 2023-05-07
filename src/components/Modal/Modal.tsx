@@ -60,6 +60,7 @@ function Modal() {
                     margin: "10px",
                     fontSize: "20px",
                     color: "white",
+                    boxShadow: "1px 2px 3px 0px #343a40",
                   }}
                 >
                   Annuler
@@ -71,6 +72,7 @@ function Modal() {
                     backgroundColor: "#6a994e",
                     fontSize: "20px",
                     color: "white",
+                    boxShadow: "1px 2px 3px 0px #343a40",
                   }}
                 >
                   Connexion
