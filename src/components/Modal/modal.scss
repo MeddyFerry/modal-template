@@ -13,6 +13,16 @@
   padding: 12px;
   width: 70%;
 }
+@mixin button-styles {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #f9f7f3;
+  box-shadow: 1px 2px 3px 0px #343a40;
+}
 
 .form * {
   color: #343a40;
@@ -20,8 +30,15 @@
 
 .open-modal-btn {
   @include flex-center;
+  @include button-styles;
+  color: #343a40;
   box-shadow: 1px 2px 3px 0px #343a40;
   margin-right: 2rem;
+
+  &:hover {
+    background-color: #eeeae0;
+    border-color: #c77dff;
+  }
 }
 
 .modal-container {
@@ -85,4 +102,25 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
+}
+
+.submit-btn {
+  background-color: #6a994e;
+  @include button-styles;
+
+  &:hover {
+    background-color: #386641;
+    border-color: #c77dff;
+  }
+}
+
+.cancel-btn {
+  background-color: #bc4749;
+  margin-right: 1rem;
+  @include button-styles;
+
+  &:hover {
+    background-color: #86090b;
+    border-color: #c77dff;
+  }
 }

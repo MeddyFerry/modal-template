@@ -55,26 +55,10 @@ function Modal() {
                 <button
                   className="cancel-btn"
                   onClick={() => setShowModal(false)}
-                  style={{
-                    backgroundColor: "#bc4749",
-                    margin: "10px",
-                    fontSize: "20px",
-                    color: "white",
-                    boxShadow: "1px 2px 3px 0px #343a40",
-                  }}
                 >
                   Annuler
                 </button>
-                <button
-                  className="submit-btn"
-                  type="submit"
-                  style={{
-                    backgroundColor: "#6a994e",
-                    fontSize: "20px",
-                    color: "white",
-                    boxShadow: "1px 2px 3px 0px #343a40",
-                  }}
-                >
+                <button className="submit-btn" type="submit">
                   Connexion
                 </button>
               </div>
