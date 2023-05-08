@@ -15,5 +15,10 @@
   padding-top: 1rem;
   display: inline-block;
   margin: 0 1rem;
-  color: #343a40;
+  color: #7209b7;
+
+  &:hover {
+    color: #f72585;
+    transform: scale(1.08);
+  }
 }
