@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./modal.scss";
 import myImage from "../../assets/waving.png?inline";
+import Connexion from "../../services/Connexion";
 
 function Modal() {
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    try {
+      const token = await Connexion.login(username, password);
+      localStorage.setItem("token", token);
+
+      // Réinitialisez le formulaire et fermez la modal
+      setShowModal(false);
+      console.log("Connexion réussie");
+    } catch (error) {
+      console.error("Erreur lors de la connexion :", error);
+    }
+  };
 
   return (
     <div>
@@ -29,27 +47,24 @@ function Modal() {
                 </div>
                 <h2>Veuillez vous connecter</h2>
               </div>
-              <form
-                className="modal-form"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setShowModal(false);
-                  console.log("envoyé");
-                }}
-              >
+              <form className="modal-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <input
                     className="form-input"
-                    type="email"
-                    id="email"
-                    placeholder=" test@gmail.com"
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
 
                   <input
                     className="form-input"
                     type="password"
                     id="password"
-                    placeholder=" Mot de passe"
+                    placeholder="Mot de passe"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
 
